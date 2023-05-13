@@ -28,7 +28,8 @@ def guardar(request):
 
 def detalle(request, estudiante_id):
     estudiante = Estudiante.objects.get(pk=estudiante_id)
-    return render(request, 'detalle.html', {'estudiante_data': estudiante}) 
+    return render(request, 'estudiantes/detalle.html', {'estudiante_data': estudiante}) 
+    # return HttpResponse('estoy con el estudiante ', estudiante.nombre)
 
 def actualizar(request, estudiante):
     pass
