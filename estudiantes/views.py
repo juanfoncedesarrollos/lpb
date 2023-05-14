@@ -24,12 +24,23 @@ def guardar(request):
     estudiante.apellido_2 = est_apellido_2
     estudiante.save()
 
-    return HttpResponse('estoy guardando' + request.POST['txt_identificacion'])
+    # return render(request, 'estudiantes/index.html', {})
+    return index(request)
 
 def detalle(request, estudiante_id):
     estudiante = Estudiante.objects.get(pk=estudiante_id)
     return render(request, 'estudiantes/detalle.html', {'estudiante_data': estudiante}) 
     # return HttpResponse('estoy con el estudiante ', estudiante.nombre)
 
-def actualizar(request, estudiante):
-    pass
+def actualizar(request, estudiante_id):
+    estudiante = Estudiante.objects.get(pk=estudiante_id)
+    estudiante.nombre = request.POST['txt_nombre']
+    estudiante.apellido_1 = request.POST['txt_apellido_1']
+    estudiante.apellido_2 = request.POST['txt_apellido_2']
+    estudiante.save()
+    return render(request, 'estudiantes/detalle.html', {'estudiante_data': estudiante})
+
+def eliminar(request, estudiante_id):
+    estudiante = Estudiante.objects.get(pk=estudiante_id)
+    estudiante.delete()
+    return index(request)
