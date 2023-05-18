@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'lineatres'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BE79D2C1A274957A1187BB9D7BDE700 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EB268DCB427248F2B5B8EE778D386A15 }}
