@@ -21,7 +21,7 @@
                 <td>{{ estudiante.apellido_1 }}</td>
                 <td>{{ estudiante.apellido_2 }}</td>
                 <!-- <td><a href="detalle/{{estudiante.pk}}">ver mas</a></td> -->
-                <td><a href="detalle/{{estudiante.pk}}">ver mas</a></td>
+                <td><a href="{% url 'estudiantes:detalle' estudiante.pk %}">ver mas</a></td>
             </tr>
         {% endfor %}    
     </table>

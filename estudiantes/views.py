@@ -6,7 +6,6 @@ def index(request):
     estudiantes = Estudiante.objects.all()
     return render(request, 'estudiantes/index.html', {"estudiantes_list":estudiantes})
 
-
 def crear(request):
     # al_identificacion = request.POST['txt_identificacion']
     return render(request, 'estudiantes/crear.html')
