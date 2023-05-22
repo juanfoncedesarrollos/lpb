@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-cc_ik-!a(0tn*gh$i-mhqit)9kkdo1yz-3jt!ir2zqcc24upsm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['20.119.8.30', '127.0.0.1']
+ALLOWED_HOSTS = ['20.119.8.30', '127.0.0.1', 'lineatres.azurewebsites.net','20.119.8.30', '127.0.0.1']
 
 
 # Application definition
@@ -129,3 +129,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://lineatres.azurewebsites.net',]
