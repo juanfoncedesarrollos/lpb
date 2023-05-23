@@ -7,7 +7,7 @@ from core import views as core
 app_name = 'cursos'
 
 urlpatterns = [
-    path('', views.index, name='inicio'),
+    path('', views.index, name='index'),
     path('crear/', views.crear, name='crear'),
     path('guardar/', views.guardar, name='guardar'),
     path('detalle/<int:curso_id>/', views.detalle, name='detalle'),
