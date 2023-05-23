@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="{% url 'estudiantes:index' %}">regresar</a>
     {{ estudiante_data.identificacion }}
     <form action="{% url 'estudiantes:actualizar' estudiante_data.pk %}" method="POST">
         {% csrf_token %}
